@@ -138,7 +138,7 @@ class NetworkConfig:
         """
         return NetworkConfig(
             chain_id="osmosis-1",
-            url="grpc+https://rpc.osmosis.strange.love:443",
+            url="grpc+https://grpc.osmosis.zone:9090",
             fee_minimum_gas_price=1000000000,  
             fee_denomination="uosmo",         
             staking_denomination="uosmo",     
