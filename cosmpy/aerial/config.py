@@ -36,6 +36,7 @@ URL_PREFIXES = (
     "grpc+http",
     "rest+https",
     "rest+http",
+    "grpc",
 )
 
 
@@ -138,7 +139,7 @@ class NetworkConfig:
         """
         return NetworkConfig(
             chain_id="osmosis-1",
-            url="grpc+https://grpc.osmosis.zone:9090",
+            url="grpc://grpc.osmosis.zone:9090",
             fee_minimum_gas_price=1000000000,  
             fee_denomination="uosmo",         
             staking_denomination="uosmo",     
