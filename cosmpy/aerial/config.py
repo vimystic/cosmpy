@@ -129,6 +129,22 @@ class NetworkConfig:
             staking_denomination="afet",
             faucet_url=None,
         )
+    
+    @classmethod
+    def osmosis_chain_mainnet(cls) -> "NetworkConfig":
+        """Get the OsmosisChain mainnet configuration.
+
+        :return: OsmosisChain mainnet configuration
+        """
+        return NetworkConfig(
+            chain_id="osmosis-1",
+            url="grpc+https://rpc.osmosis.strange.love:443",
+            fee_minimum_gas_price=1000000000,  
+            fee_denomination="uosmo",         
+            staking_denomination="uosmo",     
+            faucet_url=None,                  
+        )
+
 
     @classmethod
     def fetch_mainnet(cls) -> "NetworkConfig":
