@@ -97,7 +97,11 @@ def parse_url(url: str) -> ParsedUrl:
     elif result.scheme == "rest+http":
         protocol = Protocol.REST
         secure = False
-        default_port = 80
+        default_port = 80   
+    elif result.scheme == "grpc":
+        protocol = Protocol.GRPC
+        secure = False
+        default_port = 9090
     else:
         raise RuntimeError(f"Unsupported url scheme: {result.scheme}")
 
